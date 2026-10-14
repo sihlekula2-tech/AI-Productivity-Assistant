@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutProjectRouteImport } from './routes/about-project'
+import { Route as AnimalsRouteImport } from './routes/animals'
+import { Route as AssistantRouteImport } from './routes/assistant'
+import { Route as ConservationRouteImport } from './routes/conservation'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ExperiencesRouteImport } from './routes/experiences'
+import { Route as PromptsRouteImport } from './routes/prompts'
+import { Route as ResponsibleAiRouteImport } from './routes/responsible-ai'
+import { Route as VisitRouteImport } from './routes/visit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutProjectRoute = AboutProjectRouteImport.update({
+  id: '/about-project',
+  path: '/about-project',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnimalsRoute = AnimalsRouteImport.update({
+  id: '/animals',
+  path: '/animals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssistantRoute = AssistantRouteImport.update({
+  id: '/assistant',
+  path: '/assistant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConservationRoute = ConservationRouteImport.update({
+  id: '/conservation',
+  path: '/conservation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperiencesRoute = ExperiencesRouteImport.update({
+  id: '/experiences',
+  path: '/experiences',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PromptsRoute = PromptsRouteImport.update({
+  id: '/prompts',
+  path: '/prompts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResponsibleAiRoute = ResponsibleAiRouteImport.update({
+  id: '/responsible-ai',
+  path: '/responsible-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VisitRoute = VisitRouteImport.update({
+  id: '/visit',
+  path: '/visit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-project': typeof AboutProjectRoute
+  '/animals': typeof AnimalsRoute
+  '/assistant': typeof AssistantRoute
+  '/conservation': typeof ConservationRoute
+  '/contact': typeof ContactRoute
+  '/experiences': typeof ExperiencesRoute
+  '/prompts': typeof PromptsRoute
+  '/responsible-ai': typeof ResponsibleAiRoute
+  '/visit': typeof VisitRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-project': typeof AboutProjectRoute
+  '/animals': typeof AnimalsRoute
+  '/assistant': typeof AssistantRoute
+  '/conservation': typeof ConservationRoute
+  '/contact': typeof ContactRoute
+  '/experiences': typeof ExperiencesRoute
+  '/prompts': typeof PromptsRoute
+  '/responsible-ai': typeof ResponsibleAiRoute
+  '/visit': typeof VisitRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-project': typeof AboutProjectRoute
+  '/animals': typeof AnimalsRoute
+  '/assistant': typeof AssistantRoute
+  '/conservation': typeof ConservationRoute
+  '/contact': typeof ContactRoute
+  '/experiences': typeof ExperiencesRoute
+  '/prompts': typeof PromptsRoute
+  '/responsible-ai': typeof ResponsibleAiRoute
+  '/visit': typeof VisitRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about-project'
+    | '/animals'
+    | '/assistant'
+    | '/conservation'
+    | '/contact'
+    | '/experiences'
+    | '/prompts'
+    | '/responsible-ai'
+    | '/visit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about-project'
+    | '/animals'
+    | '/assistant'
+    | '/conservation'
+    | '/contact'
+    | '/experiences'
+    | '/prompts'
+    | '/responsible-ai'
+    | '/visit'
+  id:
+    | '__root__'
+    | '/'
+    | '/about-project'
+    | '/animals'
+    | '/assistant'
+    | '/conservation'
+    | '/contact'
+    | '/experiences'
+    | '/prompts'
+    | '/responsible-ai'
+    | '/visit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutProjectRoute: typeof AboutProjectRoute
+  AnimalsRoute: typeof AnimalsRoute
+  AssistantRoute: typeof AssistantRoute
+  ConservationRoute: typeof ConservationRoute
+  ContactRoute: typeof ContactRoute
+  ExperiencesRoute: typeof ExperiencesRoute
+  PromptsRoute: typeof PromptsRoute
+  ResponsibleAiRoute: typeof ResponsibleAiRoute
+  VisitRoute: typeof VisitRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about-project': {
+      id: '/about-project'
+      path: '/about-project'
+      fullPath: '/about-project'
+      preLoaderRoute: typeof AboutProjectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/animals': {
+      id: '/animals'
+      path: '/animals'
+      fullPath: '/animals'
+      preLoaderRoute: typeof AnimalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assistant': {
+      id: '/assistant'
+      path: '/assistant'
+      fullPath: '/assistant'
+      preLoaderRoute: typeof AssistantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conservation': {
+      id: '/conservation'
+      path: '/conservation'
+      fullPath: '/conservation'
+      preLoaderRoute: typeof ConservationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiences': {
+      id: '/experiences'
+      path: '/experiences'
+      fullPath: '/experiences'
+      preLoaderRoute: typeof ExperiencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prompts': {
+      id: '/prompts'
+      path: '/prompts'
+      fullPath: '/prompts'
+      preLoaderRoute: typeof PromptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/responsible-ai': {
+      id: '/responsible-ai'
+      path: '/responsible-ai'
+      fullPath: '/responsible-ai'
+      preLoaderRoute: typeof ResponsibleAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/visit': {
+      id: '/visit'
+      path: '/visit'
+      fullPath: '/visit'
+      preLoaderRoute: typeof VisitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutProjectRoute: AboutProjectRoute,
+  AnimalsRoute: AnimalsRoute,
+  AssistantRoute: AssistantRoute,
+  ConservationRoute: ConservationRoute,
+  ContactRoute: ContactRoute,
+  ExperiencesRoute: ExperiencesRoute,
+  PromptsRoute: PromptsRoute,
+  ResponsibleAiRoute: ResponsibleAiRoute,
+  VisitRoute: VisitRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
